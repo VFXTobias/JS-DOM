@@ -1,16 +1,23 @@
+
+// // Uncomment code sections to see how they function in the console.
+
 let val;
 
-const list = document.querySelector('ul.collection');
-const listItem = document.querySelector('li.collection-item:first-child');
+const list = document.querySelector('ul.collection'); // // Parent list object.
+const listItem = document.querySelector('li.collection-item:first-child'); // // Child list items.
 
-val = listItem;
+// val = listItem;
 val = list;
+
+console.log(val);
 
 // Get child nodes
 val = list.childNodes;
-val = list.childNodes[0];
-val = list.childNodes[0].nodeName;
-val = list.childNodes[3].nodeType;
+// val = list.childNodes[0];
+// val = list.childNodes[0].nodeName;
+// val = list.childNodes[3].nodeType;
+
+console.log(val);
 
 // 1 - Element
 // 2 - Attribute (deprecated)
@@ -20,14 +27,14 @@ val = list.childNodes[3].nodeType;
 // 10 - Doctype
 
 
-// Get children element nodes
+// Get children element nodes // // You'll likely use this method more commonly than 'childNodes. Note that this method returns an HTML Collection rather than a node list. An HTML collection is an object with indices. In other words, an array.
 val = list.children;
-val = list.children[1];
-list.children[1].textContent = 'Hello';
+// val = list.children[1];
+// list.children[1].textContent = 'Hello';
 
 console.log(val);
 
-// Children of children
+// Children of children 
 list.children[3].children[0].id = 'test-link';
 val = list.children[3].children[0];
 

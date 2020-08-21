@@ -43,7 +43,7 @@ const items = document.querySelectorAll('ul.collection li.collection-item');
 
 console.log(items); // // Note that this is a 'node list'.
 
-// // Here we can see that we're able to perform an array method 'forEach' on our object because it originates from the 'querySelectorAll' method.  A unique exception condition.
+// // *****IMPORTANT*****Here we can see that we're able to perform an array method 'forEach' on our object because it originates from the 'querySelectorAll' method.  A unique exception condition.
 
 items.forEach(function(item, index){
     item.textContent = `${index}: Hello`;
@@ -56,12 +56,12 @@ console.log(items);
 const liOdd = document.querySelectorAll('li:nth-child(odd)');
 const liEven = document.querySelectorAll('li:nth-child(even)');
 
-// // Using the 'forEach' method.
+// // Using the 'forEach' method. *****IMPORTANT***** Note that this is an ARRAY method yet it works here because of the object's origination from 'querySelectorAll.  
 liOdd.forEach(function(li, index){
   li.style.background = '#ccc';
 });
 
-// // Doing the same thing but using the for loop method.
+// // Doing the same thing but using the for loop method. *****IMPORTANT***** Note that this is an ARRAY method yet it works here because of the object's origination from 'querySelectorAll.
 for(let i = 0; i < liEven.length; i++){
   liEven[i].style.background = '#f4f4f4';
 }

@@ -56,10 +56,10 @@ console.log(val);
 val = document.scripts[2].getAttribute('src');
 console.log(val);
 
-let scripts = document.scripts;
+let scripts = document.scripts; //This is only able to return a node list, eg. a basic list.  NOT AN ARRAY. 
 console.log(scripts);
 
-let scriptsArr = Array.from(scripts);
+let scriptsArr = Array.from(scripts); //This converts our document scripts object which is natively a node list, eg just a basic list, into a usable array.  From there we're able to utilize more meaningful iteration methods like a 'for each' which only works on arrays.  See below.
 
 scriptsArr.forEach(function(script) {
   console.log(script.getAttribute('src'));
